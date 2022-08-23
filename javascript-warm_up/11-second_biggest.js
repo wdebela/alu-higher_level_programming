@@ -5,7 +5,7 @@ if (typeof myVar[2] === 'undefined') {
 } else if (typeof myVar[3] === 'undefined') {
   console.log(0);
 } else {
-  const Arr = myVar.map(Number);
-  Arr.sort();
-  console.log(Arr.length - 1);
+  let Arr = myVar.slice(2).map(Number);
+  Arr = Arr.sort(function(a, b){return b-a});
+  console.log(Arr[1]);
 }
